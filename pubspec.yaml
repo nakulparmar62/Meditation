@@ -1,0 +1,222 @@
+name: myapp
+description: A exported flutter project from FUNCTION12
+
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  google_fonts: ^4.0.4
+  cloud_firestore: ^4.7.1
+  firebase_core: any
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/page-1/images/wi-fi.png
+    - assets/page-1/images/battery.png
+    - assets/page-1/images/combined-shape.png
+    - assets/page-1/images/illustration-girl.png
+    - assets/page-1/images/illustration-tree.png
+    - assets/page-1/images/tab-bar.png
+    - assets/page-1/images/illustration-nature.png
+    - assets/page-1/images/auto-group-qya1.png
+    - assets/page-1/images/combined-shape-Uyt.png
+    - assets/page-1/images/muted.png
+    - assets/page-1/images/muted-XMp.png
+    - assets/page-1/images/muted-G4E.png
+    - assets/page-1/images/illustration.png
+    - assets/page-1/images/auto-group-yeox.png
+    - assets/page-1/images/icons-like.png
+    - assets/page-1/images/pause.png
+    - assets/page-1/images/muted-oWv.png
+    - assets/page-1/images/muted-czr.png
+    - assets/page-1/images/icons-like-ZEW.png
+    - assets/page-1/images/icons-like-8zr.png
+    - assets/page-1/images/battery-utS.png
+    - assets/page-1/images/illustration-VRx.png
+    - assets/page-1/images/auto-group-pjqf.png
+    - assets/page-1/images/like.png
+    - assets/page-1/images/illustration-WdC.png
+    - assets/page-1/images/illustration-qbU.png
+    - assets/page-1/images/wi-fi-uDx.png
+    - assets/page-1/images/clouds.png
+    - assets/page-1/images/muted-dXk.png
+    - assets/page-1/images/muted-NXG.png
+    - assets/page-1/images/auto-group-gqss.png
+    - assets/page-1/images/illustration-TNe.png
+    - assets/page-1/images/muted-X6v.png
+    - assets/page-1/images/battery-41c.png
+    - assets/page-1/images/illustration-nature-XSE.png
+    - assets/page-1/images/muted-RfL.png
+    - assets/page-1/images/combined-shape-tKp.png
+    - assets/page-1/images/illustration-4jQ.png
+    - assets/page-1/images/wi-fi-6MC.png
+    - assets/page-1/images/icons-like-hKL.png
+    - assets/page-1/images/muted-Hqg.png
+    - assets/page-1/images/illustration-zL6.png
+    - assets/page-1/images/battery-uci.png
+    - assets/page-1/images/muted-CGN.png
+    - assets/page-1/images/chevron-down.png
+    - assets/page-1/images/combined-shape-4pv.png
+    - assets/page-1/images/illustration-61U.png
+    - assets/page-1/images/wi-fi-JY6.png
+    - assets/page-1/images/muted-LoG.png
+    - assets/page-1/images/muted-ejQ.png
+    - assets/page-1/images/illustration-riA.png
+    - assets/page-1/images/vector.png
+    - assets/page-1/images/clock.png
+    - assets/page-1/images/battery-Ken.png
+    - assets/page-1/images/combined-shape-Vxa.png
+    - assets/page-1/images/icon-meditations.png
+    - assets/page-1/images/icons-like-piS.png
+    - assets/page-1/images/auto-group-b88d.png
+    - assets/page-1/images/icon-practices.png
+    - assets/page-1/images/battery-2A2.png
+    - assets/page-1/images/wi-fi-SS2.png
+    - assets/page-1/images/icons-like-CAJ.png
+    - assets/page-1/images/illustration-Y8E.png
+    - assets/page-1/images/illustration-uzv.png
+    - assets/page-1/images/muted-2PG.png
+    - assets/page-1/images/wi-fi-Fpz.png
+    - assets/page-1/images/avatar.png
+    - assets/page-1/images/stop.png
+    - assets/page-1/images/muted-DYi.png
+    - assets/page-1/images/combined-shape-8fg.png
+    - assets/page-1/images/chevron-down-Kqx.png
+    - assets/page-1/images/icons-setting.png
+    - assets/page-1/images/battery-cLE.png
+    - assets/page-1/images/mask-group.png
+    - assets/page-1/images/battery-kSa.png
+    - assets/page-1/images/icons-like-WUv.png
+    - assets/page-1/images/illustration-nature-Jcv.png
+    - assets/page-1/images/icons-like-V6N.png
+    - assets/page-1/images/vector-m74.png
+    - assets/page-1/images/combined-shape-rgn.png
+    - assets/page-1/images/x.png
+    - assets/page-1/images/tab-bar-Hst.png
+    - assets/page-1/images/x-8vS.png
+    - assets/page-1/images/muted-A8v.png
+    - assets/page-1/images/icons-like-jsU.png
+    - assets/page-1/images/icons-like-qSe.png
+    - assets/page-1/images/illustration-iAJ.png
+    - assets/page-1/images/icons-like-u9Y.png
+    - assets/page-1/images/tab-bar-QLW.png
+    - assets/page-1/images/icons-like-UU6.png
+    - assets/page-1/images/wi-fi-Zae.png
+    - assets/page-1/images/icons-like-6qU.png
+    - assets/page-1/images/icons-like-tBY.png
+    - assets/page-1/images/icons-like-Xen.png
+    - assets/page-1/images/sliders.png
+    - assets/page-1/images/icons-like-D4a.png
+    - assets/page-1/images/battery-wTk.png
+    - assets/page-1/images/wi-fi-ndC.png
+    - assets/page-1/images/tab-bar-fSE.png
+    - assets/page-1/images/icons-like-1Ae.png
+    - assets/page-1/images/icons-like-Xs4.png
+    - assets/page-1/images/illustration-Twc.png
+    - assets/page-1/images/icons-like-8Xx.png
+    - assets/page-1/images/illustration-Xxi.png
+    - assets/page-1/images/illustration-9a6.png
+    - assets/page-1/images/wi-fi-a6z.png
+    - assets/page-1/images/tab-bar-vXQ.png
+    - assets/page-1/images/illustration-eFY.png
+    - assets/page-1/images/illustration-C9C.png
+    - assets/page-1/images/combined-shape-zHk.png
+    - assets/page-1/images/wi-fi-puc.png
+    - assets/page-1/images/illustration-zYW.png
+    - assets/page-1/images/muted-RJN.png
+    - assets/page-1/images/combined-shape-cQn.png
+    - assets/page-1/images/clock-dCi.png
+    - assets/page-1/images/battery-BjC.png
+    - assets/page-1/images/icons-like-ntW.png
+    - assets/page-1/images/illustration-nature-xGN.png
+    - assets/page-1/images/illustration-v5L.png
+    - assets/page-1/images/auto-group-girs.png
+    - assets/page-1/images/auto-group-5s6y.png
+    - assets/page-1/images/icons-like-gkn.png
+    - assets/page-1/images/profile-4.png
+    - assets/page-1/images/home1.png
+    - assets/page-1/images/3rd.png
+    - assets/page-1/images/openbook.png
+    - assets/page-1/images/person.png
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
