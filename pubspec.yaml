@@ -193,6 +193,7 @@ flutter:
     - assets/page-1/images/3rd.png
     - assets/page-1/images/openbook.png
     - assets/page-1/images/person.png
+    - assets/page-1/images/illustration-3ve.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
