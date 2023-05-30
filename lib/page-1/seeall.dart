@@ -13,17 +13,24 @@ class seeAll extends StatefulWidget {
 
 class _seeAllState extends State<seeAll> {
   List? contacts;
-
+   Map? data;
+   bool isLoading=false;
   Future<dynamic> getImagePostFromDocument() async {
-    var collection = await FirebaseFirestore.instance.collection('data');
+    setState(() {
+      isLoading=true;
+    });
+    var collection =  FirebaseFirestore.instance.collection('data');
     collection.doc('ozxB2irEyBcmcZQw9PIX').snapshots().listen((docSnapshot) {
       debugPrint('Name is call');
       if (docSnapshot.exists) {
-        Map<String, dynamic> data = docSnapshot.data()!;
-
-        // You can then retrieve the value from the Map like this:
-        var name = data['song_name'];
-        debugPrint('Name is $name');
+        setState(() {
+          data = docSnapshot.data()!;
+        });
+        setState(() {
+          isLoading=false;
+        });
+       /* var name = data['song_name'];
+        debugPrint('Name is $name');*/
       }
     });
   }
@@ -38,17 +45,16 @@ class _seeAllState extends State<seeAll> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0,
-        title: Text("Popular", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
-        leading: Icon(CupertinoIcons.back, color: Colors.black),
-        centerTitle: true,
-      ),
-      body: Center(
-          child: ListView.builder(
-            itemCount: 5,
+            backgroundColor: Colors.white,
+            appBar: AppBar(
+              elevation: 0,
+              title: Text("Popular", style: TextStyle(color: Colors.black)),
+              backgroundColor: Colors.white,
+              leading: Icon(CupertinoIcons.back, color: Colors.black),
+              centerTitle: true,
+            ),
+            body:isLoading?Center(child: CircularProgressIndicator()):ListView.builder(
+            itemCount: data!.length,
             itemBuilder: (context, index) {
               return InkWell(
                 onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Mental_training())),
@@ -57,7 +63,7 @@ class _seeAllState extends State<seeAll> {
                     'assets/page-1/images/illustration-riA.png',
                   ),
                   title: Text(
-                    'MENTAL TRAINING',
+                    data!['song_name'],
                     style: SafeGoogleFont(
                       'SF Pro Display',
                       fontSize: 17,
@@ -75,8 +81,7 @@ class _seeAllState extends State<seeAll> {
                 ),
               );
             },
-          )),
-    ));
+          )));
   }
 }
 /*ListView.builder(

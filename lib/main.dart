@@ -15,7 +15,14 @@ import 'package:myapp/utils/default_options.dart';
 // import 'package:myapp/page-1/preview-1.dart';
 void main() async {
 	WidgetsFlutterBinding.ensureInitialized();
-	await Firebase.initializeApp(options: DefaultFirebaseConfig.platformOptions);
+	await Firebase.initializeApp(
+		options: FirebaseOptions(
+			apiKey: "AIzaSyBXaI15l-Sq4WlGsJ5Jix533l7ohASdo-k",
+			appId: "1:186383135727:android:1ca95ea857ed2d3cc5fc1a",
+			messagingSenderId: "",
+			projectId: "meditation-346cf",
+		),
+	);
 	runApp(MyApp());
 }
 
