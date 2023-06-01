@@ -170,17 +170,25 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'SEE ALL',
-                                style: SafeGoogleFont(
-                                  'SF Pro Display',
-                                  fontSize: 16 * ffem,
-                                  fontWeight: FontWeight.w500,
-                                  height: 1.125 * ffem / fem,
-                                  letterSpacing: -0.0799999982 * fem,
-                                  color: const Color(0xff4a80f0),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => seeAll(),));
+                                },
+                                style: TextButton.styleFrom(
+                                  padding: EdgeInsets.zero,
                                 ),
-                              ),
+                                child: Text(
+                                  'SEE ALL',
+                                  style: SafeGoogleFont(
+                                    'SF Pro Display',
+                                    fontSize: 16 * ffem,
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.125 * ffem / fem,
+                                    letterSpacing: -0.0799999982 * fem,
+                                    color: const Color(0xff4a80f0),
+                                  ),
+                                ),
+                              )
                             ),
                           ],
                         ),
@@ -414,16 +422,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   child: Row(
                                                     crossAxisAlignment: CrossAxisAlignment.center,
                                                     children: [
-                                                      Text(
-                                                        // stepsjnW (52:74)
-                                                        '7 steps',
-                                                        style: SafeGoogleFont(
-                                                          'SF Pro Display',
-                                                          fontSize: 12 * ffem,
-                                                          fontWeight: FontWeight.w300,
-                                                          height: 1.5 * ffem / fem,
-                                                          letterSpacing: -0.0799999982 * fem,
-                                                          color: const Color(0xffffffff),
+                                                      Flexible(
+                                                        child: Text(
+                                                          // stepsjnW (52:74)
+                                                          '7 steps',
+                                                          style: SafeGoogleFont(
+                                                            'SF Pro Display',
+                                                            fontSize: 12 * ffem,
+                                                            fontWeight: FontWeight.w300,
+                                                            height: 1.5 * ffem / fem,
+                                                            letterSpacing: -0.0799999982 * fem,
+                                                            color: const Color(0xffffffff),
+                                                          ),
                                                         ),
                                                       ),
                                                       Container(

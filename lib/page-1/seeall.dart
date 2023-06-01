@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/page-1/DashBoard.dart';
+import 'package:myapp/page-1/home.dart';
 import '../utils.dart';
 import 'mental-training.dart';
 
@@ -50,7 +52,11 @@ class _seeAllState extends State<seeAll> {
               elevation: 0,
               title: Text("Popular", style: TextStyle(color: Colors.black)),
               backgroundColor: Colors.white,
-              leading: Icon(CupertinoIcons.back, color: Colors.black),
+              leading: InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard(),));
+                  },
+                  child: Icon(CupertinoIcons.back, color: Colors.black)),
               centerTitle: true,
             ),
             body:isLoading?Center(child: CircularProgressIndicator()):ListView.builder(

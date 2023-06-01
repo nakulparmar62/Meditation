@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/page-1/seeall.dart';
 import 'package:myapp/utils.dart';
+
+import 'mental-training.dart';
 
 class prectice extends StatefulWidget {
   @override
@@ -56,45 +59,55 @@ class _precticeState extends State<prectice> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        Container(
-                          // group6rzJ (52:670)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 15*fem, 0*fem),
-                          width: 310*fem,
-                          height: double.infinity,
-                          decoration: BoxDecoration (
-                            color: Color(0xff2d31ac),
-                            borderRadius: BorderRadius.circular(24*fem),
-                          ),
-                          child: Center(
-                            // autogroup5s6yavJ (Dc9SAz8u8cXwvE8nUX5S6y)
-                            child: SizedBox(
-                              width: 310*fem,
-                              height: 210*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/auto-group-5s6y.png',
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Mental_training(),));
+                          },
+                          child: Container(
+                            // group6rzJ (52:670)
+                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 15*fem, 0*fem),
+                            width: 310*fem,
+                            height: double.infinity,
+                            decoration: BoxDecoration (
+                              color: Color(0xff2d31ac),
+                              borderRadius: BorderRadius.circular(24*fem),
+                            ),
+                            child: Center(
+                              // autogroup5s6yavJ (Dc9SAz8u8cXwvE8nUX5S6y)
+                              child: SizedBox(
                                 width: 310*fem,
                                 height: 210*fem,
+                                child: Image.asset(
+                                  'assets/page-1/images/auto-group-5s6y.png',
+                                  width: 310*fem,
+                                  height: 210*fem,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                        Container(
-                          // card21hk2 (52:650)
-                          width: 310*fem,
-                          height: double.infinity,
-                          decoration: BoxDecoration (
-                            color: Color(0xff44afe3),
-                            borderRadius: BorderRadius.circular(24*fem),
-                          ),
-                          child: Center(
-                            // autogroupgqssqrE (Dc9RqFCnsrjAJP6xgZgqss)
-                            child: SizedBox(
-                              width: 310*fem,
-                              height: 210*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/auto-group-gqss.png',
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Mental_training(),));
+                          },
+                          child: Container(
+                            // card21hk2 (52:650)
+                            width: 310*fem,
+                            height: double.infinity,
+                            decoration: BoxDecoration (
+                              color: Color(0xff44afe3),
+                              borderRadius: BorderRadius.circular(24*fem),
+                            ),
+                            child: Center(
+                              // autogroupgqssqrE (Dc9RqFCnsrjAJP6xgZgqss)
+                              child: SizedBox(
                                 width: 310*fem,
                                 height: 210*fem,
+                                child: Image.asset(
+                                  'assets/page-1/images/auto-group-gqss.png',
+                                  width: 310*fem,
+                                  height: 210*fem,
+                                ),
                               ),
                             ),
                           ),
@@ -124,25 +137,30 @@ class _precticeState extends State<prectice> {
               child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: Image.asset(
-                      'assets/page-1/images/illustration-riA.png',
-                    ),
-                    title: Text(
-                      'MENTAL TRAINING',
-                      style: SafeGoogleFont(
-                        'SF Pro Display',
-                        fontSize: 17,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff000000),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Mental_training(),));
+                    },
+                    child: ListTile(
+                      leading: Image.asset(
+                        'assets/page-1/images/illustration-riA.png',
                       ),
-                    ),
-                    subtitle: Text("3 Min 43 Sec"),
-                    trailing: Image.asset(
-                      'assets/page-1/images/like.png',
-                      width: 20,
-                      height: 28,
-                      color: Colors.black,
+                      title: Text(
+                        'MENTAL TRAINING',
+                        style: SafeGoogleFont(
+                          'SF Pro Display',
+                          fontSize: 17,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff000000),
+                        ),
+                      ),
+                      subtitle: Text("3 Min 43 Sec"),
+                      trailing: Image.asset(
+                        'assets/page-1/images/like.png',
+                        width: 20,
+                        height: 28,
+                        color: Colors.black,
+                      ),
                     ),
                   );
                 },

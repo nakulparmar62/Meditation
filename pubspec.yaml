@@ -40,6 +40,7 @@ dependencies:
   google_fonts: ^4.0.4
   cloud_firestore: ^4.7.1
   firebase_core: any
+  audioplayers:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -67,6 +68,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/page-1/images/
+    - assets/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
